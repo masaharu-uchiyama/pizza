@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>ベース</title>
+<link rel="stylesheet" th:href="@{/css/base.css}">
+</head>
+<body>
+    <header>
+    <h1 id="header-h1">
+        <a href="#" class="header-a">pizza</a>
+    </h1>
+        <nav class="navigation">
+            <ul>
+                <li><a th:href="@{#}" class="header-a">アカウント</a></li>
+                <li><a href="#" class="header-a">注文履歴</a></li>
+                <li><a href="#" class="header-a">カート</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div layout:fragment="content">各ページレイアウト</div>
+</body>
+</html>

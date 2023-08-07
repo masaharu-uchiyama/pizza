@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{base/base}">
+<head>
+<meta charset="UTF-8">
+<title>ログイン</title>
+<link rel="stylesheet" th:href="@{/css/content.css}">
+</head>
+<body>
+    <div layout:fragment="content" class="content">
+        <h1 class="content-h1">ログイン</h1>
+        <form th:action="@{/pizza/checkLogin}" method="post" class="content-form">
+            <input type="text" name="userId" placeholder="userId"><br>
+            <input type="password" name="password" placeholder="最低8文字必要です"><br>
+            <input type="submit" value="ログイン"><br>
+            <a th:href="@{/pizza/register}">アカウント登録はこちら</a>
+        </form>
+    </div>
+</body>
+</html>
