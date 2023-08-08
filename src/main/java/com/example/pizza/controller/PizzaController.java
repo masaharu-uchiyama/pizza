@@ -96,11 +96,11 @@ public class PizzaController {
             return "acountRegistration";
         }
 
+        userInformationService.insertUser(userInformation);
         String sessionId = request.getSession().getId();
         Sessions sessions = new Sessions(sessionId, userInformation.getUserId());
-        sessionsService.reInsertSessions(sessions);
         response.addCookie(CookieUtilty.createCookie("sessionId", sessionId));
-        userInformationService.insertUser(userInformation);
+        sessionsService.reInsertSessions(sessions);
 
         return "redirect:/pizza/goodsList";
     }
