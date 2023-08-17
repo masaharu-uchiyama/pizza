@@ -15,5 +15,4 @@ public class Sessions {
     private String sessionId;
     /** ユーザーID */
     private String userId;
-
 }
